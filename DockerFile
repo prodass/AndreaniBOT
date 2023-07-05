@@ -1,0 +1,14 @@
+# Imagen base de Python
+FROM python:3.9-slim
+
+# Establecer el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiar el script de Python al contenedor
+COPY AndreaniBOT.py /app
+
+# Instalar las dependencias del script
+RUN pip install aiogram aiohttp
+
+# Ejecutar el script al iniciar el contenedor
+CMD [ "python", "AndreaniBOT.py" ]
