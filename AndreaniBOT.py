@@ -41,7 +41,7 @@ async def consultar_y_enviar():
             ultimo_estado = nuevo_estado
             await enviar_mensaje(mensaje)
 
-        await asyncio.sleep(300)  # Espera 5 minutos (300 segundos)
+        await asyncio.sleep(1800)
 
 
 @dp.message_handler(commands=['start'])
